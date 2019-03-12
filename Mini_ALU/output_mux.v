@@ -19,7 +19,7 @@ module output_mux(
                 3'b000: final_out = a;
                 3'b001: final_out = b;
                 3'b010: final_out = ~a + 'b1; // twos complement of a (invert and add 1)
-                3'b011: final_out = ~b + 'b1; // twos complement of b (invert and add 1
+                3'b011: final_out = ~b + 'b1; // twos complement of b (invert and add 1)
                 3'b100: final_out = {5'b00000, comp_out}; // concatenate 5zeros with 1bit result
                 3'b101: final_out = xor_out;
                 3'b110: final_out = adder_out;

@@ -8,7 +8,7 @@ module ALU_tb();
     
     integer i; // used in for loop for testing
     
-    alu mini_alu (
+    alu uut (
         .input_a(test_in0),
         .input_b(test_in1),
         .fxn(fxn_code),    
@@ -19,8 +19,10 @@ module ALU_tb();
     
     initial
     begin
-        test_in0 = 6'b111111;
-        test_in1 = 6'b000000;
+        test_in0 = 6'b000111;
+        test_in1 = 6'b111111;
+        
+        // Loop through each of the eight possible fxn codes
         for(i=0; i<8; i=i+1 )
             begin
                 fxn_code = i;
