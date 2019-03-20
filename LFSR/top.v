@@ -7,7 +7,6 @@ module top(
     output wire clk
     );
     
-//    wire clk;
     
     clock clock(
         .CCLK(CCLK),
@@ -16,7 +15,7 @@ module top(
     );
     
     lfsr lfsr(
-        .clk(CCLK),
+        .clk(clk),
         .reset(reset),
         .lfsr_out(lfsr_out),
         .max_tick(max_tick)
